@@ -43,9 +43,6 @@ public class Quad {
 	private int shaderNormalId, shaderProzeduralId;
 	private float colCounter;
 	private float lightCounter;
-	
-	private Texture texture;
-	private Texture normalTexture;
 
 	public Quad(float length) {
 		initializeObject();
@@ -171,31 +168,24 @@ public class Quad {
 	public void drawObject(){
 
 		//glPushMatrix();
-		OwnGL.pushMatrix();
 		//glTranslatef(distanceToZero[0],distanceToZero[1],distanceToZero[2]);
-		OwnGL.translate(distanceToZero[0],distanceToZero[1],distanceToZero[2]);
 		
 		
 //		glRotatef(ownSpin*rotationSpeed,spinValues[0], spinValues[1],spinValues[2]);
-		OwnGL.rotateX(ownSpin*rotationSpeed*spinValues[0]);
-		OwnGL.rotateY(ownSpin*rotationSpeed*spinValues[1]);
-		OwnGL.rotateZ(ownSpin*rotationSpeed*spinValues[2]);
+		
 //		glScalef(0.4f,0.4f,0.4f);
-		OwnGL.scale(0.4f,0.4f,0.4f);
+		
 //		glRotatef(ownSpin*0.2f, rotationValues[0],rotationValues[1],rotationValues[2]);
 		
 		
 		GL20.glUseProgram(shaderProzeduralId);
 		GL20.glUniform1f(GL20.glGetUniformLocation(shaderProzeduralId, "colorCounter"),((float)Math.sin(colCounter)));
 		GL20.glUniform3f(GL20.glGetUniformLocation(shaderProzeduralId, "lightPos"),2 *(float)Math.sin(lightCounter), 1, 10);
-		GL20.glUniformMatrix4(GL20.glGetUniformLocation(shaderProzeduralId ,"mvMatrix"), false, OwnGL.getMVMatrixAsBuffer());
-		GL20.glUniformMatrix4(GL20.glGetUniformLocation(shaderProzeduralId ,"mvpMatrix"), false, OwnGL.getMVPMatrixAsBuffer());
+//		GL20.glUniformMatrix4(GL20.glGetUniformLocation(shaderProzeduralId ,"mvMatrix"), false, OwnGL.getMVMatrixAsBuffer());
+//		GL20.glUniformMatrix4(GL20.glGetUniformLocation(shaderProzeduralId ,"mvpMatrix"), false, OwnGL.getMVPMatrixAsBuffer());
 		
 		
-		OwnGL.rotateX(ownSpin*0.2f*spinValues[0]*rotationValues[0]);
-		OwnGL.rotateY(ownSpin*0.2f*spinValues[1]*rotationValues[1]);
-		OwnGL.rotateZ(ownSpin*0.2f*spinValues[2]*rotationValues[2]);
-
+		
 		if(!list.isEmpty()){
 			//for(Quad q : list)q.drawObject();
 		}
@@ -207,7 +197,7 @@ public class Quad {
 		
 		drawAllPoints();
 		
-		OwnGL.popMatrix();
+		
 	}
 
 
@@ -404,16 +394,7 @@ public class Quad {
 		}
 	}
 
-	public void setTetures(Texture texture, Texture normalTexture) {
-		this.texture = texture;
-		this.normalTexture = normalTexture;
-		
-		GL13.glActiveTexture(GL13.GL_TEXTURE0);//Setzt 0te Texture
-		glBindTexture(GL_TEXTURE_2D, this.texture.getId()); 
-		
-		GL13.glActiveTexture(GL13.GL_TEXTURE1);//Setzt 1te Texture
-		glBindTexture(GL_TEXTURE_2D, this.normalTexture.getId());
-	}
+	
 
 
 

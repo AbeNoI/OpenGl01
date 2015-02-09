@@ -1,7 +1,5 @@
 package de.berlin.abenoi.abstracts;
 
-import org.lwjgl.Sys;
-
 public abstract class FpsUtils {
 	
 	public static float fps;		  // number of frames per second
