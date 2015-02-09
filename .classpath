@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.7.0_45"/>
+	<classpathentry kind="lib" path="lib/lwjgl-2.9.3/lwjgl-2.9.3/jar/lwjgl_util.jar" sourcepath="lib/lwjgl-2.9.3/lwjgl-2.9.3/src.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Preparation/lib/lwjgl-2.9.3/lwjgl-2.9.3/doc/javadoc.zip!/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Preparation/lib/lwjgl-2.9.3/lwjgl-2.9.3/native/windows"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/lwjgl-2.9.3/lwjgl-2.9.3/jar/lwjgl.jar" sourcepath="lib/lwjgl-2.9.3/lwjgl-2.9.3/src.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Preparation/lib/lwjgl-2.9.3/lwjgl-2.9.3/doc/javadoc.zip!/"/>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Preparation/lib/lwjgl-2.9.3/lwjgl-2.9.3/native/windows"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/slick/lib/slick.jar"/>
+	<classpathentry kind="lib" path="lib/twl/TWL.jar"/>
+	<classpathentry kind="lib" path="lib/twl/TWLEffects.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
