@@ -1,12 +1,1 @@
 /de/
-/templates/
-/bin/
-/lib/
-/.settings/*
-*.class
-*.jar
-*.war
-*.ear/
-.git
-.classpath
-.project
